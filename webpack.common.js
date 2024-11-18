@@ -7,7 +7,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Production",
+      template: "./src/index.html",
     }),
   ],
   output: {
@@ -24,10 +24,6 @@ module.exports = {
       {
         test: /\.html$/i,
         loader: "html-loader",
-      },
-      {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: "asset/resource",
       },
     ],
   },
