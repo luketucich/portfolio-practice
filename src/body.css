@@ -16,12 +16,13 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif;
+
   background: linear-gradient(
       345deg,
       var(--secondary-color) 70%,
       var(--primary-color) 10%
-    ),
-    url("/src/texture.jpg") no-repeat center center;
+    )
+    no-repeat;
   background-size: cover;
 }
 
