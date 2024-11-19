@@ -1,0 +1,62 @@
+:root {
+  --primary-color: #121212;
+  --secondary-color: #1e1e1e;
+  --text-color: #ffffff;
+  --card-background-color: #2a2a2a;
+  --card-border-color: #3a3a3a;
+}
+
+main {
+  margin-top: 3rem;
+  margin-bottom: 6rem;
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  color: var(--text-color);
+}
+
+#projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  min-width: 30%;
+  gap: 1rem;
+  padding: 1rem;
+  justify-content: center;
+}
+
+.project {
+  animation: fadeIn 1.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: var(--card-background-color);
+  border-radius: 0.3rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.project-image {
+  object-fit: contain;
+}
+
+.project-info {
+  padding: 1rem;
+  text-align: left;
+  color: var(--text-color);
+}
+
+/* Phone */
+@media (max-width: 600px) {
+  #projects-container {
+    max-width: 100%;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+  #projects-container {
+    min-width: 50%;
+  }
+}

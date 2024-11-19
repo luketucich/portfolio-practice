@@ -1,0 +1,116 @@
+:root {
+  --primary-color: #121212;
+  --secondary-color: #1e1e1e;
+  --text-color: #ffffff;
+  --card-background-color: #2a2a2a;
+  --card-border-color: #3a3a3a;
+}
+
+body {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  background: linear-gradient(
+      345deg,
+      var(--secondary-color) 70%,
+      var(--primary-color) 10%
+    ),
+    url("/src/texture.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  background: linear-gradient(45deg, #ff6ec4, #7873f5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  letter-spacing: -0.5px;
+  margin: 0.5rem 0;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  background: linear-gradient(45deg, #e0e0e0, #f0f8ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  letter-spacing: -0.5px;
+  margin: 0.5rem 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+a:hover {
+  background: linear-gradient(45deg, #ff6ec4, #7873f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.socials {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.socials i {
+  font-size: 2rem;
+  margin: 0.5rem;
+}
+
+#github {
+  animation: fadeIn 1s ease-in-out;
+}
+
+#linkedin {
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+#twitter {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@media (max-width: 600px) {
+  body {
+    background: linear-gradient(
+        345deg,
+        var(--secondary-color) 79%,
+        var(--primary-color) 21%
+      )
+      no-repeat;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  body {
+    background: linear-gradient(
+        345deg,
+        var(--secondary-color) 75%,
+        var(--primary-color) 10%
+      )
+      no-repeat;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
